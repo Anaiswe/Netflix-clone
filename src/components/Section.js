@@ -2,12 +2,12 @@ import data from "../data.json";
 function Section() {
   return (
     <div className="main-categories">
-      {data.map((data, index) => {
+      {data.map((elem, index) => {
         return (
           <div key={index}>
-            <div>{data.category}</div>
+            <div>{elem.category}</div>
             <div className="movies-pictures">
-              {data.images.map((image, index) => {
+              {elem.images.map((image, index) => {
                 return <img key={index} src={image} />;
               })}
             </div>
